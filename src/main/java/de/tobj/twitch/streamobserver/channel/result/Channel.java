@@ -1,4 +1,4 @@
-package de.tobj.twitch.streamobserver.result.channel;
+package de.tobj.twitch.streamobserver.channel.result;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;

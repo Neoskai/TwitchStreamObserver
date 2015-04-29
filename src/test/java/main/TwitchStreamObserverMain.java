@@ -4,9 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import de.tobj.twitch.streamobserver.TwitchStreamObserver;
-import de.tobj.twitch.streamobserver.event.StreamStatusEvent;
-import de.tobj.twitch.streamobserver.event.StreamUpdateEvent;
-import de.tobj.twitch.streamobserver.listener.StreamListener;
+import de.tobj.twitch.streamobserver.channel.event.StreamStatusEvent;
+import de.tobj.twitch.streamobserver.channel.event.StreamUpdateEvent;
+import de.tobj.twitch.streamobserver.channel.listener.StreamListener;
 
 public class TwitchStreamObserverMain {
 	private static final Logger logger = LogManager.getLogger(TwitchStreamObserverMain.class);

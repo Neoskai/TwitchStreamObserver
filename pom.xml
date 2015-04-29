@@ -44,6 +44,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<log4j2.version>2.1</log4j2.version>
+		<httprequestjson.version>1.0.0-SNAPSHOT</httprequestjson.version>
 	</properties>
 
 	<prerequisites>
@@ -53,13 +54,8 @@
 	<dependencies>
 		<dependency>
 			<groupId>de.tobj.http.simplerequest</groupId>
-			<artifactId>simplehttprequest</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>de.tobj.http.simplerequest</groupId>
-			<artifactId>jsonmapper</artifactId>
-			<version>1.0.0-SNAPSHOT</version>
+			<artifactId>httprequestjson</artifactId>
+			<version>${httprequestjson.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
