@@ -49,6 +49,10 @@ public class Channel {
 	private Long views;
 	@JsonProperty("followers")
 	private Long followers;
+	@JsonProperty("bio")
+	private String bio;
+	@JsonProperty("type")
+	private String type;
 
 	@JsonProperty("mature")
 	public Boolean getMature() {
@@ -258,5 +262,25 @@ public class Channel {
 	@JsonProperty("followers")
 	public void setFollowers(Long followers) {
 		this.followers = followers;
+	}
+
+	@JsonProperty("bio")
+	public String getBio() {
+		return bio;
+	}
+
+	@JsonProperty("bio")
+	public void setBio(String bio) {
+		this.bio = bio;
+	}
+
+	@JsonProperty("type")
+	public String getType() {
+		return type;
+	}
+
+	@JsonProperty("type")
+	public void setType(String type) {
+		this.type = type;
 	}
 }
