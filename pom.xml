@@ -52,7 +52,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<log4j2.version>2.1</log4j2.version>
-		<httprequestjson.version>1.0.0</httprequestjson.version>
+		<httprequestjson.version>1.0.1-SNAPSHOT</httprequestjson.version>
 	</properties>
 
 	<prerequisites>
