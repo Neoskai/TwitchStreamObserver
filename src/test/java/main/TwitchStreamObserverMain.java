@@ -13,7 +13,7 @@ public class TwitchStreamObserverMain {
 
 	public static void main(String[] args) {
 
-		TwitchStreamObserver observer = new TwitchStreamObserver();
+		TwitchStreamObserver observer = new TwitchStreamObserver("tso-test");
 
 		observer.addChannel("rocketbeanstv");
 		observer.addListener(new StreamListener() {

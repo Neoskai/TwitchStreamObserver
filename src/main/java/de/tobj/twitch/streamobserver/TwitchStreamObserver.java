@@ -31,6 +31,7 @@ public class TwitchStreamObserver extends Thread {
 	private static String defaultBaseUrl = "https://api.twitch.tv/kraken/";
 	private static long defaultTimeout = TimeUnit.MINUTES.toSeconds(1);
 	private long timeout = 0;
+	private String clientId;
 
 	/**
 	 * Constructor
@@ -38,9 +39,10 @@ public class TwitchStreamObserver extends Thread {
 	 * @param baseUrl
 	 * @param timeout
 	 */
-	public TwitchStreamObserver(String baseUrl, long timeout) {
+	public TwitchStreamObserver(String clientId, String baseUrl, long timeout) {
 		this.twitchClient = new HTTPRequestJSON(baseUrl);
 		this.timeout = timeout;
+		this.clientId = clientId;
 	}
 
 	/**
@@ -48,8 +50,8 @@ public class TwitchStreamObserver extends Thread {
 	 * 
 	 * @param baseUrl
 	 */
-	public TwitchStreamObserver(String baseUrl) {
-		this(baseUrl, defaultTimeout);
+	public TwitchStreamObserver(String clientId, String baseUrl) {
+		this(clientId, baseUrl, defaultTimeout);
 	}
 
 	/**
@@ -57,15 +59,15 @@ public class TwitchStreamObserver extends Thread {
 	 * 
 	 * @param timout
 	 */
-	public TwitchStreamObserver(long timout) {
-		this(defaultBaseUrl, timout);
+	public TwitchStreamObserver(String clientId, long timout) {
+		this(clientId, defaultBaseUrl, timout);
 	}
 
 	/**
 	 * Constructor with defaultBaseUrl and defaultTimeout
 	 */
-	public TwitchStreamObserver() {
-		this(defaultBaseUrl, defaultTimeout);
+	public TwitchStreamObserver(String clientId) {
+		this(clientId, defaultBaseUrl, defaultTimeout);
 	}
 
 	/**
@@ -106,7 +108,7 @@ public class TwitchStreamObserver extends Thread {
 	 */
 	private void checkStream(Channel channel) {
 		try {
-			StreamResult stream = twitchClient.request(new StreamRequest(channel), new StreamResult());
+			StreamResult stream = twitchClient.request(new StreamRequest(channel, clientId), new StreamResult());
 			if (channel.isOnline() != stream.isOnline()) {
 				Date lastStatusChange = channel.getLastStatusChange();
 				Date currentStatusChangeDate = new Date();
