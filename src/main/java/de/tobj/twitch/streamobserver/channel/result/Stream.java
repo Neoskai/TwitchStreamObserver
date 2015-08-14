@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonIgnoreProperties(value = { "_links" })
+@JsonIgnoreProperties(value = { "_links", "is_playlist" })
 public class Stream {
 	@JsonProperty("game")
 	private String game;
