@@ -23,6 +23,8 @@ public class Stream {
 	private Channel channel;
 	@JsonProperty("preview")
 	private Preview preview;
+	@JsonProperty("delay")
+	private Long delay;
 
 	@JsonProperty("game")
 	public String getGame() {
@@ -102,5 +104,15 @@ public class Stream {
 	@JsonProperty("preview")
 	public void setPreview(Preview preview) {
 		this.preview = preview;
+	}
+	
+	@JsonProperty("delay")
+	public Long getDelay() {
+		return delay;
+	}
+
+	@JsonProperty("delay")
+	public void setDelay(Long delay) {
+		this.delay = delay;
 	}
 }
