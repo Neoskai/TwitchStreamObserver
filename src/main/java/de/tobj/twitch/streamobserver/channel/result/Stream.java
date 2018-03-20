@@ -23,6 +23,27 @@ public class Stream {
 	private Channel channel;
 	@JsonProperty("preview")
 	private Preview preview;
+	@JsonProperty("stream_type")
+	private String type;
+	@JsonProperty("delay")
+	private Double delay;
+	@JsonProperty("delay")
+	public Double getDelay() {
+		return delay;
+	}
+	@JsonProperty("delay")
+	public void setDelay(Double delay) {
+		this.delay = delay;
+	}
+
+	@JsonProperty("stream_type")
+	public String getType(){
+		return type;
+	}
+	@JsonProperty("stream_type")
+	public void setType(String type){
+		this.type = type;
+	}
 
 	@JsonProperty("game")
 	public String getGame() {
