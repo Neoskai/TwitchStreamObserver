@@ -53,6 +53,8 @@ public class Channel {
 	private String bio;
 	@JsonProperty("type")
 	private String type;
+	@JsonProperty("broadcaster_software")
+	private String software;
 
 	@JsonProperty("mature")
 	public Boolean getMature() {
